@@ -29,6 +29,7 @@ DRILL_PANDAS_TYPE_MAP = {
         'TIMESTAMP': 'datetime64[ns]',
         'VARDECIMAL': 'object',
         'VARCHAR' : 'string' if pd.__version__ >= '1' else 'object',
+        'MAP': 'object',
         }
 
 logging.basicConfig(level=logging.WARN)
