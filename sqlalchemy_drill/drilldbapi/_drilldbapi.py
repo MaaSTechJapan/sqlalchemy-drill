@@ -142,11 +142,11 @@ class Cursor(object):
                 }
                 column_metadata.append(col)
 
-            for i in range(0, len(self.metadata)):
-                if(self.metadata[i] == "MAP"):
-                    k = self.columns[i]
-                    for r in self.rows:
-                        r[k] = json.loads(r[k])
+            # for i in range(0, len(self.metadata)):
+            #     if(self.metadata[i] == "MAP"):
+            #         k = self.columns[i]
+            #         for r in self.rows:
+            #             r[k] = json.loads(r[k])
 
             self._resultSetMetadata = column_metadata
 
