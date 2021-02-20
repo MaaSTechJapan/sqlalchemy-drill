@@ -26,8 +26,8 @@ from sqlalchemy import create_engine
 # You would also have to handle cases were the JVM is already started or the JVM was started
 # with a different thread than main.
 import jpype
-#jpype.startJVM("-ea")
-jpype.startJVM("-ea", classpath="lib/*")
+jpype.startJVM("-ea")
+# jpype.startJVM("-ea", classpath="lib/*")
 
 #engine = create_engine('drill+sadrill://localhost:8047/dfs?use_ssl=False')
 #
@@ -37,8 +37,7 @@ jpype.startJVM("-ea", classpath="lib/*")
 #        print(row)
 
 print("Now JDBC")
-jdbc_engine = create_engine('drill+jdbc://admin:password@localhost:31010')
-
+jdbc_engine = create_engine('drill+jdbc://localhost:31010')
 
 with jdbc_engine.connect() as con:
     rs = con.execute('SELECT * FROM cp.`employee.json` LIMIT 5')

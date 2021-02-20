@@ -41,7 +41,7 @@ class DrillDialect_jdbc(DrillDialect):
         # The user is responsible for starting the JVM with the class path, but we can
         # do some sanity checks to make sure they are pointed in the right direction.
         if not jpype.isJVMStarted():
-            jpype.startJVM()
+            jpype.startJVM("-ea")
             # raise Exception("The JVM must be started before connecting to a JDBC driver.")
         try:
             jpype.JClass("org.apache.drill.jdbc.Driver")

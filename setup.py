@@ -53,7 +53,7 @@ setup(name='sqlalchemy_drill',
           "sqlalchemy"
       ],
       extras_require={
-          "jdbc": ["JPype1", "JayDeBeApi"],
+          "jdbc": ["JPype1"],
           "odbc": ["pyodbc"],
       },
       keywords='SQLAlchemy Apache Drill',

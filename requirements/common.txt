@@ -1,4 +1,5 @@
 sqlalchemy
 pydrill
+JPype1
 JayDeBeApi
 pyodbc
